@@ -1,4 +1,4 @@
-# Audi Speedometer Workspace
+# UN4 Speedometer Workspace
 
 ## Virtual environment workflow
 
@@ -58,3 +58,9 @@ Both helpers are exposed as VS Code tasks (`docs: build` and `docs: serve`) so y
 - Navigation updates automatically via `mkdocs-awesome-pages-plugin`, so no manual `nav:` edits are required.
 - Re-run `./scripts/build_docs.sh` or `./scripts/serve_docs.sh` to pick up the changes.
 - (Optional) Create a `.pages` file inside the folder if you want to override ordering or titles for that subtree.
+
+## Continuous integration & deployment
+
+- Every push to the `main` (and legacy `master`) branch, plus manual dispatches, trigger the `deploy-docs` GitHub Actions workflow located in `.github/workflows/docs-build.yml`.
+- The workflow installs dependencies from `requirements.txt`, runs `mkdocs build --strict` using the repository-root `mkdocs.yml`, uploads the generated `site/` directory as a Pages artifact, and deploys it via `actions/deploy-pages`.
+- The published site is served from GitHub Pages under the repository’s Pages URL (visible in the workflow summary). Inspect the Actions tab for logs, artifacts, and the live URL after each deployment.
