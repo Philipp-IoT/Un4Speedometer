@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/Philipp-IoT/Un4Speedometer/compare/v1.0.1...v1.1.0) (2025-11-23)
+
+
+### Features
+
+* Add schematic for speedometer drive ([fb003ad](https://github.com/Philipp-IoT/Un4Speedometer/commit/fb003adaebacb07f1bedea9be6e6130063ead5f4))
+
 ## [1.0.1](https://github.com/Philipp-IoT/Un4Speedometer/compare/v1.0.0...v1.0.1) (2025-11-23)
 
 
